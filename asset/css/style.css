@@ -245,3 +245,10 @@ header {
 #product .btn {
   margin-inline: auto;
 }
+
+/* contact */
+
+.shops {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
