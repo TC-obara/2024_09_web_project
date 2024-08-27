@@ -29,7 +29,8 @@
 }
 
 main,
-.h-wrap {
+.h-wrap,
+.f-wrap {
   width: min(100% - 80px, 1340px);
   margin-inline: auto;
 }
@@ -52,11 +53,15 @@ img {
 }
 
 html {
-  background: var(--bg-color-200);
+  background: var(--bg-color-100);
   font-family: 'Noto Serif JP', serif;
   font-size: var(--reguler-text);
   min-height: 2000px;
 }
+body {
+  background: var(--bg-color-200);
+}
+
 .en {
   font-family: 'Cormorant Garamond', serif;
   text-transform: capitalize;
@@ -79,10 +84,17 @@ html {
     font-size: var(--ssm-text);
   }
 }
+section .btn {
+  width: 250px;
+  margin-inline: auto;
+}
 
 header {
   width: 100%;
   background: var(--bg-color-100);
+  position: sticky;
+  top: 0;
+  z-index: 9999;
 }
 
 .h-wrap {
@@ -249,7 +261,7 @@ header {
 /* contact */
 
 .shops {
-  width: 900px;
+  width: min(100%, 900px);
   margin-inline: auto;
   gap: 14px;
   display: grid;
@@ -274,7 +286,7 @@ header {
   margin-inline: auto;
   display: grid;
   grid-template-columns: max-content auto 1fr;
-  gap: 18px;
+  gap: 14px;
 
   li {
     display: grid;
@@ -284,7 +296,7 @@ header {
       display: grid;
       grid-template-columns: subgrid;
       grid-column: span 3;
-      gap: 18px;
+      gap: 14px;
 
       padding: 14px 0;
       border-bottom: 1px solid var(--bg-color-100);
@@ -294,13 +306,73 @@ header {
 
 .category {
   height: fit-content;
-  padding: 4px 8px;
+  padding: 4px 1em;
   background: var(--bg-color-100);
   color: var(--bg-color-200);
   text-align: center;
 
   font-size: calc(var(--sm-text) * 1.2);
+  text-transform: capitalize;
 }
 .date {
   font-size: calc(var(--reguler-text) * 1.2);
+}
+
+/* footer */
+footer {
+  width: 100%;
+  background: var(--bg-color-100);
+  font-size: var(--sm-text);
+  color: var(--bg-color-200);
+}
+
+.f-wrap {
+  padding: 100px 0;
+}
+.f-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.f-left {
+  display: flex;
+  gap: 40px;
+}
+.f-item {
+  width: 200px;
+  margin-bottom: 14px;
+  color: var(--bg-color-200);
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: var(--bg-color-200);
+  }
+}
+.f-nav {
+  display: flex;
+  gap: 40px;
+  .f-nav-list li {
+    margin-bottom: 14px;
+  }
+  a {
+    color: var(--bg-color-200);
+  }
+}
+
+.f-right {
+  display: grid;
+
+  .logo {
+    font-size: var(--title-text);
+    margin-bottom: 8px;
+    color: var(--bg-color-200);
+    text-align: right;
+    letter-spacing: var(--logo-space);
+  }
+  p {
+    text-align: right;
+    font-size: var(--reguler-text);
+  }
+  small {
+    margin-top: auto;
+  }
 }
