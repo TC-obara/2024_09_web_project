@@ -249,6 +249,23 @@ header {
 /* contact */
 
 .shops {
+  width: 900px;
+  margin-inline: auto;
+  gap: 14px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
+  img {
+    aspect-ratio: 4 / 3;
+    background: var(--bg-color-100);
+    border-radius: 4px;
+  }
+
+  .shop-text {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 6px 12px;
+  }
 }
+
+/* news */
