@@ -190,10 +190,30 @@ header {
     .grid-item {
       width: 100%;
       height: 200px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: var(--bg-color-100);
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+
+      img {
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        margin: auto;
+        inset: 0;
+      }
+      p {
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        inset: 0;
+        z-index: 1;
+        color: var(--bg-color-200);
+        background: color-mix(in srgb, #000 30%, transparent);
+      }
     }
   }
 }
@@ -216,6 +236,14 @@ header {
       background: var(--bg-color-100);
       position: relative;
       border-radius: 4px;
+
+      img {
+        width: inherit;
+        height: inherit;
+        overflow: hidden;
+        object-fit: cover;
+        border-radius: 4px;
+      }
 
       .item-text {
         width: 80%;
