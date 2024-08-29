@@ -243,7 +243,6 @@ header {
         overflow: hidden;
         object-fit: cover;
         border-radius: 4px;
-        /* 更新用 */
       }
 
       .item-text {
