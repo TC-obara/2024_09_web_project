@@ -28,6 +28,10 @@
   line-height: 1.5;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 main,
 .h-wrap,
 .f-wrap {
