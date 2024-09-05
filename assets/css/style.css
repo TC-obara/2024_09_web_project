@@ -189,7 +189,7 @@ header {
 .c-grid {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, auto));
+  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
   gap: 14px;
 
   li {
