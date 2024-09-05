@@ -447,3 +447,17 @@ footer {
     }
   }
 }
+@media screen and (max-width: 780px) {
+  main,
+  .h-wrap,
+  .f-wrap {
+    width: calc(100% - 28px);
+    margin-inline: auto;
+  }
+  .nav-link p + p {
+    display: none;
+  }
+  .lg-head-nav {
+    gap: 8px;
+  }
+}
